@@ -7,6 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import ClearIcon from "@mui/icons-material/Clear";
+import Box from "@mui/material/Box";
 
 export default function Component({ data }: any) {
   const [checked, setChecked] = React.useState([0]);
@@ -25,7 +26,7 @@ export default function Component({ data }: any) {
   };
 
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       {data.map((value) => {
         const labelId = `checkbox-list-label-${value}`;
 
@@ -69,6 +70,6 @@ export default function Component({ data }: any) {
           </ListItem>
         );
       })}
-    </List>
+    </Box>
   );
 }
