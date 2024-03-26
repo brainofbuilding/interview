@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <Typography variant='h1'>TODO</Typography>
+      <Typography variant="h1">TODO</Typography>
       <Component data={data} />
     </>
   );

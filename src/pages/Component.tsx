@@ -26,7 +26,7 @@ export default function Component({ data }: any) {
 
   return (
     <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
-      {data?.map((value, index) => {
+      {data.map((value) => {
         const labelId = `checkbox-list-label-${value}`;
 
         return (
@@ -36,7 +36,14 @@ export default function Component({ data }: any) {
               <IconButton
                 edge="end"
                 aria-label="comments"
-                onClick={() => delete data[index]}
+                onClick={() => {
+                  fetch(
+                    `https://jsonplaceholder.typicode.com/todos/${value.id}`,
+                    {
+                      method: "DELET",
+                    }
+                  ).then((res) => console.log(res.ok));
+                }}
               >
                 <ClearIcon />
               </IconButton>
