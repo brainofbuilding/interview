@@ -10,8 +10,8 @@ In this project we use the package manager [npm](https://www.npmjs.com/) to inst
 
 You should install at least the following versions:
 
--   Node.js >= 18.14
--   Npm >= 9.5
+- Node.js >= 18.14
+- Npm >= 9.5
 
 ### Installation
 
@@ -20,6 +20,8 @@ To install the dependencies, just run the following command:
 ```bash
 npm ci
 ```
+
+### Configuration
 
 ## Usage
 
@@ -32,3 +34,10 @@ npm run dev
 ```
 
 It will start the application on [http://localhost:5173](http://localhost:5173).
+
+## Global information
+
+### Exercice
+
+The goal of this exercice is to create a simple todo list application.
+use https://jsonplaceholder.typicode.com/ routes to fetch data.
