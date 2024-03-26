@@ -1,6 +1,7 @@
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Component from "./Component";
+import { sortByAlphabeticalOrder } from "./utils";
 
 export default function Home() {
   const [data, setData] = useState<any>();
@@ -8,7 +9,8 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       const data = await fetch("https://jsonplaceholder.typicode.com/todos");
-      const res = await data.json();
+      let res = await data.json();
+      res = sortByAlphabeticalOrder(res);
       setData(res);
     }
     fetchData();
@@ -16,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <Typography variant="h1">TODO</Typography>
+      <Typography variant='h1'>TODO</Typography>
       <Component data={data} />
     </>
   );
