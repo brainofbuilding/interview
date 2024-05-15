@@ -39,5 +39,14 @@ It will start the application on [http://localhost:5173](http://localhost:5173).
 
 ### Exercice
 
+This is a recent project that is going to experience a lot of changes and feature iterations.
+
+This project was initially a POC that was abandoned, and we now want to revive and scale it for use by a team of developers.
+
+An architecture needs to be established to structure the project. The goal is to lay the necessary foundations for feature development to make the application easily scalable (without always having to refactor).
+
+Finally, integrating new features and improving user experience are also key factors to consider
+
 The goal of this exercice is to create a simple todo list application.
+
 use https://jsonplaceholder.typicode.com/ routes to fetch data.
